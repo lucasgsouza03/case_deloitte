@@ -1,0 +1,297 @@
+[
+    {
+        "model": "user.user",
+        "pk": 1,
+        "fields": {
+            "password": "pbkdf2_sha256$600000$fulqyVXd3Q90lftNADNna6$z/Jk0xlWAkNxCR8pbQD2kxoutOdAqHLGPEO5ISFqeCY=",
+            "last_login": "2023-04-20T05:02:34.795Z",
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true,
+            "date_joined": "2023-04-19T08:27:11.003Z",
+            "email": "admin@email.com",
+            "created_at": "2023-04-19T08:27:11.175Z",
+            "updated_at": "2023-04-19T08:27:11.180Z",
+            "groups": [],
+            "user_permissions": []
+        }
+    },
+    {
+        "model": "api.student",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "full_name": "lucas gomes",
+            "birth_date": "1997-06-10"
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 1,
+        "fields": {
+            "name": "Linguagem de Programação",
+            "workload": 40
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 2,
+        "fields": {
+            "name": "Logica de Programação",
+            "workload": 40
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 3,
+        "fields": {
+            "name": "Matemática Aplicada",
+            "workload": 40
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 4,
+        "fields": {
+            "name": "Modelagem de Dados",
+            "workload": 40
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 5,
+        "fields": {
+            "name": "Engenharia de Software",
+            "workload": 40
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 6,
+        "fields": {
+            "name": "Libras",
+            "workload": 10
+        }
+    },
+    {
+        "model": "api.discipline",
+        "pk": 7,
+        "fields": {
+            "name": "Ética da Informação",
+            "workload": 10
+        }
+    },
+    {
+        "model": "api.reportcard",
+        "pk": 1,
+        "fields": {
+            "due_date": "2023-04-23",
+            "student": 1
+        }
+    },
+    {
+        "model": "api.reportcard",
+        "pk": 2,
+        "fields": {
+            "due_date": "2023-08-25",
+            "student": 1
+        }
+    },
+    {
+        "model": "api.reportcard",
+        "pk": 3,
+        "fields": {
+            "due_date": "2024-04-25",
+            "student": 1
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 3,
+        "fields": {
+            "discipline": 1,
+            "report_card": 1,
+            "grade": "10"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 4,
+        "fields": {
+            "discipline": 2,
+            "report_card": 1,
+            "grade": "9"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 5,
+        "fields": {
+            "discipline": 3,
+            "report_card": 1,
+            "grade": "6"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 6,
+        "fields": {
+            "discipline": 4,
+            "report_card": 1,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 7,
+        "fields": {
+            "discipline": 5,
+            "report_card": 1,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 8,
+        "fields": {
+            "discipline": 6,
+            "report_card": 1,
+            "grade": "0"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 9,
+        "fields": {
+            "discipline": 7,
+            "report_card": 1,
+            "grade": "4"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 10,
+        "fields": {
+            "discipline": 1,
+            "report_card": 2,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 11,
+        "fields": {
+            "discipline": 2,
+            "report_card": 2,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 12,
+        "fields": {
+            "discipline": 3,
+            "report_card": 2,
+            "grade": "10"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 13,
+        "fields": {
+            "discipline": 4,
+            "report_card": 2,
+            "grade": "6"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 14,
+        "fields": {
+            "discipline": 5,
+            "report_card": 2,
+            "grade": "8"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 15,
+        "fields": {
+            "discipline": 6,
+            "report_card": 2,
+            "grade": "6"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 16,
+        "fields": {
+            "discipline": 7,
+            "report_card": 2,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 17,
+        "fields": {
+            "discipline": 1,
+            "report_card": 3,
+            "grade": "7"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 18,
+        "fields": {
+            "discipline": 2,
+            "report_card": 3,
+            "grade": "10"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 19,
+        "fields": {
+            "discipline": 3,
+            "report_card": 3,
+            "grade": "10"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 20,
+        "fields": {
+            "discipline": 4,
+            "report_card": 3,
+            "grade": "10"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 21,
+        "fields": {
+            "discipline": 5,
+            "report_card": 3,
+            "grade": "2"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 22,
+        "fields": {
+            "discipline": 6,
+            "report_card": 3,
+            "grade": "3"
+        }
+    },
+    {
+        "model": "api.grades",
+        "pk": 23,
+        "fields": {
+            "discipline": 7,
+            "report_card": 3,
+            "grade": "8"
+        }
+    }
+]

@@ -1,15 +1,16 @@
 from django.db import models
+from user.models import User
 
 # Create your models here.
 
 class Student(models.Model):
 
-    name = models.CharField(max_length=255, verbose_name='Nome')
-    email = models.EmailField(verbose_name='E-mail')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário')
+    full_name = models.CharField(max_length=255, verbose_name=('Nome Completo'), null=True, blank=True)
     birth_date = models.DateField(verbose_name='Data de Nascimento')
 
     def __str__(self) -> str:
-        return f"{self.name} - {self.email}"
+        return f"{self.full_name} - {self.user.email}"
     
     class Meta:
         verbose_name = ("Aluno")
@@ -33,7 +34,7 @@ class ReportCard(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE, verbose_name='Aluno')
 
     def __str__(self) -> str:
-        return f"Boletim - {self.student.name}"
+        return f"Boletim - {self.student.full_name}"
     
     class Meta:
         verbose_name = ("Boletim")
@@ -43,7 +44,7 @@ class Grades(models.Model):
 
     discipline = models.ForeignKey(Discipline, on_delete=models.CASCADE, verbose_name='Disciplina')
     report_card = models.ForeignKey(ReportCard, on_delete=models.CASCADE, verbose_name='Boletim')
-    grade = models.CharField(max_length=10, verbose_name=('Nota'))
+    grade = models.CharField(max_length=10, verbose_name=('Nota'), blank=True, null=True)
 
     def __str__(self) -> str:
         return f"Nota - {self.discipline.name}: ({self.grade})"

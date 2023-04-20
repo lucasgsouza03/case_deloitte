@@ -15,7 +15,8 @@ ADD  .env /app/.env
 
 WORKDIR /app
 
-#RUN python manage.py collectstatic
-#RUN python manage.py makemigrations && python manage.py migrate
+RUN mkdir "/app/static"
 
-#CMD gunicorn --max-requests 1000 --max-requests-jitter 50 -b :8080 regengine.wsgi -w 4 --timeout 3600
+RUN python manage.py collectstatic
+
+CMD gunicorn --max-requests 1000 --max-requests-jitter 50 -b :8000 case_deloitte.wsgi -w 4 --timeout 3600

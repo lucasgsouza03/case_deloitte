@@ -15,6 +15,12 @@
 
     ```
     $ cd $path-to-project
+    ```
+* Faça uma copia do arquivo '.env.example' renomeando para '.env'
+
+* Execute o build do container com o comando abaixo:
+
+    ```
     $ docker-compose up --build -d
     ```
 
